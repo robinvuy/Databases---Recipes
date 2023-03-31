@@ -154,30 +154,35 @@ These examples will later be encoded as RSpec tests.
 # 1
 # Get all students
 
-repo = StudentRepository.new
+repo = RecipeRepository.new
 
-students = repo.all
+recipes = repo.all
 
-students.length # =>  2
+recipes.length # =>  2
 
-students[0].id # =>  1
-students[0].name # =>  'David'
-students[0].cohort_name # =>  'April 2022'
+recipes[0].id # =>  1
+recipes[0].name # =>  'Paella'
+recipes[0].average_cooking_time_in_minutes # =>  '60'
+recipes[0].rating_from_1_to_5 # =>  '4'
 
-students[1].id # =>  2
-students[1].name # =>  'Anna'
-students[1].cohort_name # =>  'May 2022'
+
+recipes[1].id # =>  2
+recipes[1].name # =>  'Sushi'
+recipes[1].average_cooking_time_in_minutes # =>  '20'
+recipes[1].rating_from_1_to_5 # =>  '3'
 
 # 2
 # Get a single student
 
-repo = StudentRepository.new
+repo = RecipeRepository.new
 
-student = repo.find(1)
+recipes = repo.find(1)
 
-student.id # =>  1
-student.name # =>  'David'
-student.cohort_name # =>  'April 2022'
+recipes.id # =>  1
+recipes.name # =>  'Sushi'
+recipes.average_cooking_time_in_minutes # =>  '20'
+recipes.rating_from_1_to_5 # =>  '3'
+
 
 # Add more examples for each method
 ```
